@@ -20,13 +20,36 @@
 	margin: auto;
 }
 </style>
-<body bgcolor="pink">
+<body >
 	Sample page called from controller
-	<br>
-	<a href="login">log in</a>
-	<a href="register">Register</a>
-
-	<div class="container">
+	
+	
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home">Fashion Spot</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="aboutus">About Us</a></li>
+        <li><a href="viewproducts">Products</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+	
+		<div class="container">
 		<br>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
@@ -41,7 +64,7 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="resources/images/pic6.jpg" alt="pic2" width="4690"	height="9500">
+					<img src="resources/images/pic6.jpg" alt="pic2" width="469"	height="9500">
 				</div>
 
 				<div class="item">
@@ -49,10 +72,10 @@
 				</div>
 
 				<div class="item">
-					<img src="resources/images/kancheepu.jpg" alt="pic3" width="9600" height="9450">
+					<img src="resources/images/kancheepu.jpg" alt="pic3" width="9699" height="9450">
 				</div>
 				<div class="item">
-					<img src="resources/images/pic4.png" alt="pic3" width="4600"	height="445">
+					<img src="resources/images/pic4.png" alt="pic3" width="460"	height="445">
 				</div>
 
 			</div>
