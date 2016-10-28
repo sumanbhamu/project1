@@ -1,9 +1,17 @@
 package com.frontend.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.niit.shopping.model.User;
 
 /* @controller is an anotation to specify a class that it's a controller*/
 @Controller
@@ -32,10 +40,27 @@ public class HomeController {
 	}
 	/* @ReqMapping("/register") indicates link to the register page */
 
-	@RequestMapping("/register")
-	public String ShowRegister() {
-		return "register";
+	@RequestMapping("/sample")
+	public ModelAndView ShowRegister(@ModelAttribute("user")User user,BindingResult result,HttpServletRequest request)
+	{
+		ModelAndView  mv=new ModelAndView("sample");
+		return mv;
 	}
+	//req for mapping
+	@RequestMapping(value="/addUser", method=RequestMethod.POST)
+	public String addUser(@ModelAttribute("user")User user,
+			ModelMap model,BindingResult result,HttpServletRequest request)
+	{
+		model.addAttribute("name",user.getUsername());
+		model.addAttribute("name",user.getUser_id());
+		model.addAttribute("name",user.getEmailid());
+		model.addAttribute("name",user.getPassword());
+		model.addAttribute("name",user.getPhno());
+		return "login";
+
+		
+	}
+	
 	/* @ReqMapping("/product1") indicates link to the product1 page */
 
 	@RequestMapping("/product1")
@@ -90,7 +115,7 @@ public class HomeController {
 		ModelAndView mv;
 		if (s1.equals("suman@gmail.com") && s2.equals("sa")) {
 			message = "valid";
-			mv = new ModelAndView("home");
+			mv = new ModelAndView("adminhome");
 			mv.addObject("info", message);
 		} else {
 			message = "Entered details are In-valid,Please try again ";
@@ -114,4 +139,5 @@ public class HomeController {
 	 * 
 	 * }
 	 */
+	
 }
