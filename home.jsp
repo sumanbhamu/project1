@@ -1,3 +1,4 @@
+<br><center><h2 style="background:pink;">Online Shopping India - Fashion Wala INDIA</h2></center><br>
 <%@include file="header.jsp"%>
 <!-- adding internal style to carousel -->
 <style>
@@ -5,9 +6,14 @@ h5, h3 {
 	color: black;
 }
 
+body {
+    background-image: url("resources/images/aaa.jpg");
+}
+
+
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	width: 40%;
-	height: 10%;
+	height: 50%;
 	margin: auto;
 }
 </style>
@@ -78,30 +84,48 @@ h5, h3 {
 		</div>
 	</div>
 	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+		<img src="resources/images/5.jpg" class="img-circle" height=200
+			style="padding-left: 50px; padding-right: 50px;" /> <img
+			src="resources/images/4.jpg" class="img-circle" height=200 width=300
+			style="padding-left: 50px" /> <img src="resources/images/3.jpg"
+			class="img-circle" height=200 width=300 style="padding-left: 50px" />
+	</center>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
 	<!-- adding product images and giving a link to it -->
 	<center>
 		<table>
 			<tr>
 				<td><a href="product1"> <img
-						src="resources/images/pic8.jpg" class="img-circle" height="200" width="200"></img>
+						src="resources/images/pic8.jpg" class="img-circle" height="250"
+						width="250"></img>
 						<h5>True style never dies</h5></a></td>
 				<td style="padding-right: 30px; padding-left: 80px;"><a
-					href="product2"> <img src="resources/images/pic2.jpg" class="img-circle"
-						height="200" width="200"></img>
+					href="product2"> <img src="resources/images/pic2.jpg"
+						class="img-circle" height="250" width="250"></img>
 						<h5>Bags Made By Hand and From The Heart</h5>
 
 				</a></td>
 
 				<td><a href="product3"> <img
-						src="resources/images/pic10.jpg" class="img-circle" height="200" width="200"></img>
+						src="resources/images/pic10.jpg" class="img-circle" height="250"
+						width="250"></img>
 
 
 						<h5>The expression of pearls</h5></a></td>
 			</tr>
 		</table>
 	</center>
-
-
-
-</body>
-</html>
+<br><br>
+	<%@include file="footer.jsp"%>
+	
